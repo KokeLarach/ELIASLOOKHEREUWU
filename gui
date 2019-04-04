@@ -16,18 +16,28 @@ public class JavaGui{
     JTextArea textArea = new JTextArea(10, 40);
     f.getContentPane().add(BorderLayout.CENTER, textArea);
     JButton button = new JButton("DONT press this button");
+    JButton button2 = new JButton("PRESS press this button");
     f.getContentPane().add(BorderLayout.NORTH, button);
+    f.getContentPane().add(BorderLayout.SOUTH, button2);
+    button2.addActionListener(new ActionListener()
+  {
+      public void actionPerformed(ActionEvent j) {
+         textArea.append("hi"); 
+        }
+    });
+  
+    
     button.addActionListener(new ActionListener()
     {
 
         
-        public void actionPerformed(ActionEvent kj) {
+        public void actionPerformed(ActionEvent k) {
            textArea.append("\nDogs are better than cats\n");
 
         }
     });
     
-   f.setVisible(true);
+    f.setVisible(true);
 
   }
 
